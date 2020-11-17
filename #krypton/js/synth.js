@@ -1,12 +1,15 @@
 const interface = new AudioContext();
 
 function synth() {
+  // Introducing variables
+  let inputFrequency = 440
+
   // Creating the oscillator
   oscillator = interface.createOscillator();
 
   // Defining the type of oscillator
   oscillator.type = "sine";
-  oscillator.frequency.value = 440;
+  oscillator.frequency.value = inputFrequency;
 
   // Create volume
   const gainNode = interface.createGain();
