@@ -12,7 +12,7 @@ function synth() {
   const gainNode = interface.createGain();
 
   // Set the attack
-  gainNode.gain.exponentialRampToValueAtTime(0.00001, interface.currentTime + 1);
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, interface.currentTime + 1);
 
   // Connent the elements
   oscillator.connect(gainNode);
@@ -25,4 +25,4 @@ function synth() {
 
 // For the play button
 let play = document.getElementById('playButton');
-play.addEventListener('mousedown', synth);
+play.addEventListener('click', synth);
