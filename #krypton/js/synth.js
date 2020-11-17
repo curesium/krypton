@@ -2,8 +2,10 @@
 const interface = new AudioContext();
 
 // Calculating the frequency
-  // Stating that the base frequency is 440hz
-var base = 440;
+  // Making the base frequency variable
+//var baseInput = document.querySelector('frequencyInput');
+//var base = parseInt(baseInput);
+let base = 440
 
   // Finding the selected harmonic
 var harmonic = 1;
@@ -18,7 +20,7 @@ document.querySelector('#harmonic2').addEventListener("mousedown", function() {
 
 
   // Calculating the frequency for the selected harmonic
-var inputFrequency = base * harmonic;
+var inputFrequency = (base * harmonic);
 
 
 function synth() {
@@ -43,7 +45,7 @@ function synth() {
   // Start the oscillator
   oscillator.start(0);
 
-  document.querySelector('#outputText').innerHTML = harmonic
+  document.querySelector('#outputText').innerHTML = baseInput
 }
 
 
