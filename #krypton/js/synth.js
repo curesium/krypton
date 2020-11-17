@@ -1,7 +1,7 @@
 // Creating the "connection"
 const interface = new AudioContext();
 
-// Introducing variables
+// Calculating the frequency
 let inputFrequency = 440
 
 function synth() {
