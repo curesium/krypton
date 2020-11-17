@@ -1,8 +1,10 @@
+// Creating the "connection"
 const interface = new AudioContext();
 
+// Introducing variables
+let inputFrequency = 440
+
 function synth() {
-  // Introducing variables
-  let inputFrequency = 440
 
   // Creating the oscillator
   oscillator = interface.createOscillator();
@@ -17,7 +19,7 @@ function synth() {
   // Set the attack
   gainNode.gain.exponentialRampToValueAtTime(0.0001, interface.currentTime + 1);
 
-  // Connent the elements
+  // Connenct the elements
   oscillator.connect(gainNode);
   gainNode.connect(interface.destination);
 
